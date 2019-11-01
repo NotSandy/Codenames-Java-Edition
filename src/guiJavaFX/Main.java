@@ -588,7 +588,7 @@ public class Main extends Application {
 		
 //      Handles githubButton in the Main Menu to open a browser window displaying gitHub page of this project
 		if(event.getSource() == githubButton) {
-			String url="https://github.com/CSE116-Spring2018/s18semesterproject-b3-teamname";
+			String url="https://github.com/NotSandy/Codenames-Java-Edition";
 			try {
 				java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
 			} catch (IOException e) {}
