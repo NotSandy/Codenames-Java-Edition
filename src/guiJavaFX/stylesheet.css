@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+
+
+/*START OF MENU BAR*/
+* {
+    -fx-my-menu-color: #6A7184;
+    -fx-my-menu-color-highlighted: #4C5468;
+    -fx-my-menu-font-color: #FAFBFC;
+    -fx-my-menu-font-color-highlighted: #FFFFFF;
+}
+
+/* MENU BAR + Top-level MENU BUTTONS */
+/*** The menu bar itself ***/    
+.menu-bar {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu itself (not selected / hovered) ***/
+.menu-bar > .container > .menu-button {
+    -fx-background-color: -fx-my-menu-color;
+}
+
+/*** Top-level menu's label (not selected / hovered) ***/
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** Top-level menu itself (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-my-menu-color-highlighted;
+}
+
+/*** Top-level menu's label (selected / hovered) ***/
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+/* MENU ITEM (children of a MENU BUTTON) */
+/*** The item itself (not hovered / focused) ***/    
+.menu-item {
+    -fx-background-color: -fx-my-menu-color; 
+}
+
+/*** The item's label (not hovered / focused) ***/   
+.menu-item .label {
+    -fx-text-fill: -fx-my-menu-font-color;
+}
+
+/*** The item itself (hovered / focused) ***/    
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-my-menu-color-highlighted; 
+}
+
+/*** The item's label (hovered / focused) ***/  
+.menu-item:focused .label, .menu-item:hovered .label {
+    -fx-text-fill: -fx-my-menu-font-color-highlighted;
+}
+
+/* CONTEXT MENU */
+/*** The context menu that contains a menu's menu items ***/  
+.context-menu {
+    -fx-background-color: -fx-my-menu-color; 
+}
+/*END OF MENU BAR*/
+
+
+
+.mainmenubackground {
+	-fx-background-image: url("mainmenu.png");
+	-fx-background-size: cover;
+	-fx-background-color: #262B3A;
+}
+
+.mainmenubackgroundhertz {
+	-fx-background-image: url("hertz_mainmenu.png");
+	-fx-background-size: cover;
+	-fx-background-color: #262B3A;
+}
+
+.gamebackground {
+	-fx-background-image: url("gamebackground.png");
+	-fx-background-size: cover;
+	-fx-background-color: #262B3A;
+}
+
+.gamebackgroundhertz {
+	-fx-background-image: url("hertz_gamebackground.png");
+	-fx-background-size: cover;
+	-fx-background-color: #262B3A;
+}
+
+.labeltile, .buttontile {
+	-fx-font:bold 12pt "Roboto Condensed";
+	-fx-background-color: #A8A8AB;
+	-fx-text-alignment: center;
+	-fx-text-fill: #FAFBFC;
+  	-fx-background-radius: 10 10 10 10;
+/*	-fx-font-family: 'Roboto Condensed', sans-serif;*/
+}
+
+.labeltile-revealed {
+	-fx-font:bold 12pt "Roboto Condensed";
+	-fx-background-color: #5b5b5e;
+	-fx-text-alignment: center;
+	-fx-text-fill: #FAFBFC;
+  	-fx-background-radius: 10 10 10 10;
+}
+
+.buttontile:hover {
+	-fx-background-color: #77DCE7;
+}
+
+.buttontile:pressed {
+	-fx-background-color: #59adb6;
+}
+
+.menubutton {
+	-fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #131A30 0%, #1F2639 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #6A7184, #4C5468);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 30pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.menubutton:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #181d2b 0%, #15171c 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #595e6e, #3b4251);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 30pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.menubutton:pressed {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #0a0c12 0%, #040506 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #474b58, #2a303a);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 30pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.autowinbutton {
+    -fx-background-color: transparent;
+}
+
+.hertzbutton {
+    -fx-background-color: transparent;
+}
+
+.controlcontainer {
+	-fx-background-color: #32384A;
+}
+
+.controlcontainer .label {
+	-fx-font:bold 16pt "Roboto Condensed";
+/*	-fx-background-color: #1F2639;*/
+	-fx-text-alignment: center;
+	-fx-text-fill: #FAFBFC;
+/*  	-fx-background-radius: 3 3 3 3;*/
+}
+
+.controlcontainer .button {
+	-fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #131A30 0%, #1F2639 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #6A7184, #4C5468);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 16pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.controlcontainer .button:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #181d2b 0%, #15171c 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #595e6e, #3b4251);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 16pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.controlcontainer .button:pressed {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #0a0c12 0%, #040506 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #474b58, #2a303a);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 16pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.cluecontainer .label {
+	-fx-font:bold 16pt "Roboto Condensed";
+/*	-fx-background-color: #32384A;
+	-fx-border-color: #32384A;
+	-fx-border-size: 30px;
+	-fx-border-width: 10px;*/
+	-fx-text-alignment: center;
+	-fx-text-fill: #FAFBFC;
+}
+
+.dialog {
+	-fx-background-color: #333949;
+}
+
+.dialog .label {
+	-fx-font:bold 12pt "Roboto Condensed";
+	-fx-text-alignment: center;
+	-fx-text-fill: #FAFBFC;
+}
+
+.dialog .button {
+	-fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #131A30 0%, #1F2639 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #6A7184, #4C5468);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 12pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.dialog .button:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #181d2b 0%, #15171c 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #595e6e, #3b4251);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 12pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+.dialog .button:pressed {
+    -fx-background-color: 
+        linear-gradient(from 0% 90% to 0% 100%, #0a0c12 0%, #040506 100%),
+        #4C5468,
+        #6A7184,
+        radial-gradient(center 50% 50%, radius 100%, #474b58, #2a303a);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+	-fx-font:bold 12pt "Roboto Condensed";
+    -fx-text-fill:#FAFBFC;
+}
+
+
+
+/*.labeltile, .buttontile
+{
+	-fx-font:bold 8pt "Verdana";
+	-fx-background-color: #1CB5E0;
+	-fx-border-color: #000046;
+	-fx-border-size:30;
+	-fx-border-width: 2;
+	-fx-text-fill:#000046;
+}
+
+.labeltile-revealed
+{
+	-fx-font:bold 8pt "Verdana";
+	-fx-background-color: #DECBA4;
+	-fx-border-color: #3E5151;
+	-fx-border-size:30;
+	-fx-border-width: 2;
+	-fx-text-fill:#3E5151;
+}
+
+.buttontile:hover
+{
+	-fx-background-color: #77DCE7;
+	-fx-border-color: #1CB5E0;
+	-fx-border-size:30;
+	-fx-border-radius: 30;
+	-fx-border-width: 2;
+}
+
+.buttontile:pressed
+{
+	-fx-background-color: linear-gradient(#000046, #1CB5E0);
+}*/
